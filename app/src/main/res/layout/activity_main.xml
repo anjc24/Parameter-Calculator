@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffecc7"
+    android:backgroundTint="#ffecc7"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/boogaloo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#383e56"
+        app:layout_constraintStart_toEndOf="@+id/areaText"
+        app:layout_constraintTop_toBottomOf="@+id/side" />
+
+    <TextView
+        android:id="@+id/areaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/boogaloo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#383e56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sideText" />
+
+    <TextView
+        android:id="@+id/side"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="172dp"
+        android:fontFamily="@font/boogaloo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#383e56"
+        app:layout_constraintStart_toEndOf="@+id/sideText"
+        app:layout_constraintTop_toBottomOf="@+id/areaEnter" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="78dp"
+        android:backgroundTint="#383e56"
+        android:backgroundTintMode="add"
+        app:layout_constraintBottom_toTopOf="@+id/areaEnter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toEndOf="@id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="419dp"
+        android:fontFamily="@font/boogaloo"
+        android:letterSpacing="0.1"
+        android:text="SHAPE"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#383e56"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/areaEnter"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/areaEnterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/boogaloo"
+        android:letterSpacing="0.1"
+        android:text="AREA"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#383e56"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/areaEnter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/areaEnter"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="78dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/areaEnterText"
+        app:layout_constraintTop_toBottomOf="@id/spinner1" />
+
+    <TextView
+        android:id="@+id/sideText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="184dp"
+        android:fontFamily="@font/boogaloo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#383e56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/areaEnterText" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="188dp"
+        android:layout_marginEnd="188dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#FF6464"
+        android:fontFamily="@font/boogaloo"
+        android:letterSpacing="0.2"
+        android:onClick="clickFunction"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        android:text="CALCULATE"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/side"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/areaEnter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
